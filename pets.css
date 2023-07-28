@@ -57,6 +57,11 @@ nav ul {
   display: flex;
   gap: 35px;
 }
+@media (max-width: 720px) {
+  nav ul {
+    display: none;
+  }
+}
 nav li {
   list-style-type: none;
   position: relative;
@@ -95,7 +100,25 @@ nav li:hover::after {
   height: 3px; /* Высота линии */
   background: var(--color-primary, #f1cdb3); /* Цвет линии */
 }
-
+/* BURGER-MENU */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 0 20px;
+  gap: 6px;
+}
+.bar {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+}
+@media (max-width: 720px) {
+  .menu-toggle {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
 /* MAIN */
 main {
   padding: 80px 40px 100px 40px;
@@ -163,6 +186,26 @@ main {
   background: var(--color-primary-light, #fddcc4);
   border: 2px solid #fddcc4;
   cursor: pointer;
+}
+@media (max-width: 1280px) {
+  .cards_container {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    padding: 60px 30px 70px 30px;
+  }
+}
+@media (max-width: 640px) {
+  .card:nth-last-child(-n + 5) {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .pets_heading {
+    font-size: 25px;
+  }
 }
 /* PAGINATION BUTTONS */
 .buttons {
@@ -249,8 +292,6 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 40px 40px 0 40px;
-  width: 1280px;
-  height: 350px;
   background: url(./img/footer-background.png), lightgray 50% / cover no-repeat;
 }
 .contacts {
@@ -287,4 +328,24 @@ footer {
   font-weight: 400;
   line-height: 115%; /* 23px */
   letter-spacing: 1.2px;
+}
+@media (max-width: 981px) {
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 65px;
+    background: radial-gradient(circle at 0% 0%, #5b483a 0%, #211f20 100%);
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 30px 10px 0 10px;
+    gap: 40px;
+  }
+}
+@media (max-width: 375px) {
+  .contacts_title {
+    font-size: 25px;
+    text-align: center;
+  }
 }
