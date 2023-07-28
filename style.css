@@ -522,18 +522,47 @@ nav li:hover::after {
     padding: 0;
     justify-content: space-between;
   }
+  .help_card {
+    width: 170px;
+  }
 }
-
+@media (max-width: 768px) {
+  .help_list {
+    gap: 20px;
+  }
+}
+@media (max-width: 680px) {
+  .help {
+    padding: 42px 10px;
+  }
+  .help_list {
+    gap: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .help_heading {
+    font-size: 25px;
+  }
+  .help_card {
+    gap: 20px;
+  }
+  .help_card img {
+    width: 50px;
+  }
+}
 /* DONATION */
 .donation {
-  padding: 80px 182px 100px 182px;
+  padding: 80px 40px 100px 40px;
   background: var(--color-light-l, #f6f6f6);
 }
 .donation_content {
   display: flex;
   gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 .donation_text {
+  max-width: 380px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -591,14 +620,34 @@ nav li:hover::after {
   font-weight: 400;
   line-height: 18px; /* 150% */
 }
-
+@media (max-width: 960px) {
+  .donation_content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 510px) {
+  .donation {
+    padding: 42px 10px;
+  }
+  .donation_text {
+    align-items: center;
+    text-align: center;
+  }
+  .donation_img {
+    width: 260px;
+  }
+}
+@media (max-width: 375px) {
+  .heading_donation {
+    font-size: 25px;
+  }
+}
 /* FOOTER */
 footer {
   display: flex;
   justify-content: space-between;
   padding: 40px 40px 0 40px;
-  width: 1280px;
-  height: 350px;
   background: url(./img/footer-background.png), lightgray 50% / cover no-repeat;
 }
 .contacts {
@@ -635,4 +684,24 @@ footer {
   font-weight: 400;
   line-height: 115%; /* 23px */
   letter-spacing: 1.2px;
+}
+@media (max-width: 981px) {
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 65px;
+    background: radial-gradient(circle at 0% 0%, #5b483a 0%, #211f20 100%);
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 30px 10px 0 10px;
+    gap: 40px;
+  }
+}
+@media (max-width: 375px) {
+  .contacts_title {
+    font-size: 25px;
+    text-align: center;
+  }
 }
