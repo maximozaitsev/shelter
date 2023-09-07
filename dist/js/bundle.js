@@ -15,6 +15,12 @@
                 document.querySelectorAll("a[href^='#']").forEach((r => {
                     r.addEventListener("click", e);
                 }));
+            }));
+            document.querySelector(".primary_button").addEventListener("click", (() => {
+                const e = document.getElementById("pets");
+                e && e.scrollIntoView({
+                    behavior: "smooth"
+                });
             })), document.addEventListener("DOMContentLoaded", (function() {
                 const e = document.querySelector(".header");
                 document.querySelector(".burger-menu");
@@ -190,7 +196,7 @@
         return i.exports;
     }
     o.m = n, o.c = t, o.i = [], o.hu = e => e + "." + o.h() + ".hot-update.js", o.miniCssF = e => {}, 
-    o.hmrF = () => "main." + o.h() + ".hot-update.json", o.h = () => "b5c619214df9cd1390a5", 
+    o.hmrF = () => "main." + o.h() + ".hot-update.json", o.h = () => "279852dc5ccccfe9d4f8", 
     o.g = function() {
         if ("object" == typeof globalThis) return globalThis;
         try {
@@ -590,11 +596,11 @@
             }
             n = void 0;
             for (var w, b = [], _ = 0; _ < s.length; _++) {
-                var k = s[_], D = o.c[k];
-                D && (D.hot._selfAccepted || D.hot._main) && u[k] !== f && !D.hot._selfInvalidated && b.push({
+                var k = s[_], I = o.c[k];
+                I && (I.hot._selfAccepted || I.hot._main) && u[k] !== f && !I.hot._selfInvalidated && b.push({
                     module: k,
-                    require: D.hot._requireSelf,
-                    errorHandler: D.hot._selfAccepted
+                    require: I.hot._requireSelf,
+                    errorHandler: I.hot._selfAccepted
                 });
             }
             return {
